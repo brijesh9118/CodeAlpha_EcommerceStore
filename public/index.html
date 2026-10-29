@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A beginner-friendly full-stack e-commerce demo store.">
+  <title>ShopEase | CodeAlpha E-commerce</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="ShopEase home"><span class="brand-mark">S</span> ShopEase</a>
+    <nav class="header-actions">
+      <span id="welcomeText" class="welcome-text"></span>
+      <button id="authButton" class="button button-ghost" type="button">Login / Sign up</button>
+      <button id="cartButton" class="button button-primary" type="button">Cart <span id="cartCount" class="cart-count">0</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">EVERYDAY ESSENTIALS</p>
+        <h1>Good finds.<br><span>Better everyday.</span></h1>
+        <p>Discover useful products for study, work, fitness, and life. A demo store built with HTML, CSS, JavaScript and Node.js.</p>
+        <a class="button button-primary hero-button" href="#products">Explore products <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-circle"></div><div class="art-card art-card-one">🎧</div>
+        <div class="art-card art-card-two">⌚</div><div class="art-card art-card-three">🎒</div>
+        <span class="art-spark spark-one">✦</span><span class="art-spark spark-two">✧</span>
+      </div>
+    </section>
+
+    <section id="products" class="products-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE COLLECTION</p><h2>Popular products</h2></div>
+        <label class="search-wrap"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Search products..." aria-label="Search products"></label>
+      </div>
+      <div id="categoryFilters" class="category-filters"></div>
+      <div id="productGrid" class="product-grid"><p class="loading">Loading products...</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#"><span class="brand-mark">S</span> ShopEase</a>
+    <p>Student project for CodeAlpha Full Stack Development Task 1.</p>
+    <span>Demo store · No real payments are collected</span>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <dialog id="productDialog" class="modal">
+    <button class="modal-close" data-close="productDialog" aria-label="Close" type="button">×</button>
+    <div id="productDetails"></div>
+  </dialog>
+
+  <dialog id="cartDialog" class="modal modal-wide">
+    <button class="modal-close" data-close="cartDialog" aria-label="Close" type="button">×</button>
+    <p class="eyebrow">YOUR BAG</p><h2>Your shopping cart</h2>
+    <div id="cartItems"></div>
+    <div class="cart-bottom"><div><span class="muted">Subtotal</span><strong id="cartTotal">₹0</strong></div><button id="checkoutButton" class="button button-primary" type="button">Place order</button></div>
+    <p class="small-note">Demo checkout only. No online payment is taken.</p>
+  </dialog>
+
+  <dialog id="authDialog" class="modal auth-modal">
+    <button class="modal-close" data-close="authDialog" aria-label="Close" type="button">×</button>
+    <p class="eyebrow">WELCOME TO SHOPEASE</p><h2 id="authTitle">Login to your account</h2>
+    <div class="auth-tabs"><button id="loginTab" class="auth-tab active" type="button">Login</button><button id="registerTab" class="auth-tab" type="button">Create account</button></div>
+    <form id="authForm">
+      <label id="nameField" class="form-field hidden">Full name<input id="authName" name="name" autocomplete="name" minlength="2" placeholder="Your name"></label>
+      <label class="form-field">Email address<input id="authEmail" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+      <label class="form-field">Password<input id="authPassword" name="password" type="password" autocomplete="current-password" minlength="8" required placeholder="At least 8 characters"></label>
+      <button id="authSubmit" class="button button-primary full-width" type="submit">Login</button>
+      <p id="authMessage" class="form-message" aria-live="polite"></p>
+    </form>
+    <p class="small-note">Demo account details are stored locally in this project's data folder.</p>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>

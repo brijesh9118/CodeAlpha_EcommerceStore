@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "category": "Electronics",
+    "price": 1499,
+    "description": "Comfortable wireless headphones with clear sound and long battery life.",
+    "emoji": "🎧",
+    "stock": 19
+  },
+  {
+    "id": 2,
+    "name": "Smart Watch",
+    "category": "Electronics",
+    "price": 2299,
+    "description": "A stylish smart watch for everyday activity tracking and notifications.",
+    "emoji": "⌚",
+    "stock": 15
+  },
+  {
+    "id": 3,
+    "name": "Everyday Backpack",
+    "category": "Accessories",
+    "price": 999,
+    "description": "A lightweight backpack with useful compartments for college and travel.",
+    "emoji": "🎒",
+    "stock": 25
+  },
+  {
+    "id": 4,
+    "name": "Running Shoes",
+    "category": "Fashion",
+    "price": 1899,
+    "description": "Lightweight shoes designed for daily walks, workouts, and casual wear.",
+    "emoji": "👟",
+    "stock": 12
+  },
+  {
+    "id": 5,
+    "name": "Desk Lamp",
+    "category": "Home",
+    "price": 699,
+    "description": "A compact desk lamp for study tables and workspaces.",
+    "emoji": "💡",
+    "stock": 18
+  },
+  {
+    "id": 6,
+    "name": "Insulated Water Bottle",
+    "category": "Accessories",
+    "price": 499,
+    "description": "A reusable bottle to keep your water handy throughout the day.",
+    "emoji": "🥤",
+    "stock": 30
+  }
+]
